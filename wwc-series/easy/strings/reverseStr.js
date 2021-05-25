@@ -7,7 +7,6 @@
 
 // 11m 15s
 // Time O(n), Auxilary Space O( )
-
 function reverseString(str) {
   var strArr = str.split('');
   for (var i = 0; i < strArr.length/2; i++) {
