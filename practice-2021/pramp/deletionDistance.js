@@ -24,6 +24,8 @@
 // [input] string str2
 // [output] integer
 
+// Leetcode 583. Delete Operation for Two Strings https://leetcode.com/problems/delete-operation-for-two-strings/
+
 //Recursion. Top-down with Memoization.
 //All PRAMP test cases passed \o/
 function deletionDistance(str1, str2) {
@@ -84,3 +86,4 @@ function deletionDistance(str1, str2) {
     result[str1.length] = left
   }
   return result[str1.length]
+}
