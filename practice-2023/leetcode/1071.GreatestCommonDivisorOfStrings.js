@@ -1,3 +1,108 @@
+7.12.2023 Wed
+Attempt 2: 3 Poms
+12min
+10min
+13min
+
+
+/**
+ * @param {string} str1
+ * @param {string} str2
+ * @return {string}
+
+Example 1:
+
+Input: str1 = "ABCABC", str2 = "ABC"
+Output: "ABC"
+
+iterate str1 with i, str2 with j, simultaneously
+at each i and j, check for match
+if match, continue
+if not match return ""
+
+
+ABCABC
+   i
+   t   
+
+ABC
+   j
+  
+tail = ending i to end of longest string
+tail is x
+
+Example 3:
+
+Input: str1 = "LEET", str2 = "CODE"
+Output: ""
+
+i and j not match, return ""
+
+LEET
+i
+
+CODE
+j
+
+
+Example 3.1
+
+when i and j eventually don't match, return ""
+
+COET
+  i
+
+CODE
+  j
+
+Example 2:
+
+Input: str1 = "ABABAB", str2 = "ABAB"
+Output: "AB"
+
+match = j,k at end
+match = [0,3] 
+
+012345
+ABABAB
+   i
+    __
+    t
+    tail
+
+ABAB
+   j
+     
+the tail is the x
+
+
+Ex 2.1
+
+"A"
+   i
+
+"AB"
+  i
+
+ */
+var gcdOfStrings = function(str1, str2) {
+   let i = 0; 
+
+   while(i<str1.length && i<str2.length) {
+      if(str1[i] !== str2[i]) return "";
+      i++
+   }
+   if(i === 0) return ""
+   //if both i and j are out of bounds, return str1
+   
+
+   //Check for tail matching
+
+};
+
+
+
+7.11.2023 Tues
 Attempt 1: 9 min.
 
 /**
