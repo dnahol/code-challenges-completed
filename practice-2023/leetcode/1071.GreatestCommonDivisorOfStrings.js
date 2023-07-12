@@ -1,5 +1,41 @@
 7.12.2023 Wed
 
+Understand and Test Solution:
+61 min
+
+/**
+ * @param {string} str1
+ * @param {string} str2
+ * @return {string}
+ */
+
+
+
+
+// Most upvoted solution: Time O(finding gcd(n,m)), Space O(int gcd(n, m))
+// Wow, so clever! Hooray for math!
+//
+// https://leetcode.com/problems/greatest-common-divisor-of-strings/solutions/3124940/c-one-line-beats-100-runtime-explanation/
+
+var gcdOfStrings = function(str1, str2) {
+
+   return str1+str2 === str2+str1 ?
+   str1.substring( 0, gcd( str1.length, str2.length ) ): 
+   "";
+    
+};
+
+// Euclidian Algorithm, Recursive: Time O(log(min(a, b))
+// source: Geeks for Geeks 
+// https://www.geeksforgeeks.org/time-complexity-of-euclidean-algorithm/
+var gcd = function(a, b) {
+   if (!b) {
+   return a;
+}
+
+   return gcd(b, a % b);
+}
+
 Attempt 3: 
 44 min
 
