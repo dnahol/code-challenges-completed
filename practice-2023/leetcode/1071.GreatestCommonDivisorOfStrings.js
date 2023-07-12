@@ -1,4 +1,83 @@
 7.12.2023 Wed
+
+Attempt 3: 
+44 min
+
+/**
+ * @param {string} str1
+ * @param {string} str2
+ * @return {string}
+
+Ex 3
+LEET
+i
+CODE
+
+Ex 2
+Input: str1 = "ABABAB", str2 = "ABAB"
+Output: "AB"
+
+tail = AB
+tail = AB
+ABABAB
+    i
+   j
+ABAB
+
+Ex 2.1
+return ""
+
+tail = AA
+ABABAA
+     i
+ j
+ABAB
+
+Ex 2.1
+return ""
+
+tail = ABA
+tail = B
+ABABABA 
+   i
+   j
+ABAB
+
+Check that the whole tail matches
+
+ */
+var gcdOfStrings = function(str1, str2) {
+   let i = 0;
+   let j = 0;
+   let tail = "";
+ 
+   if(str2 === str1) return str1;
+   if(str1.length === str2.length) return "";
+   if(str1[i] !== str2[i]) return "";
+   
+   while(i < str1.length && j < str2.length) {
+      if(str1[i] !== str2[i]) return "";
+      i++;
+      j++;
+   }
+   
+   //set and check tail
+   if(i === str1.length) {
+      tail = str2.substring(j);
+      i = 0;
+   }
+   if(j === str2.length) {
+      tail = str1.substring(i);
+      j = 0;
+   }
+
+   while(i < str1.length && j < str2.length) {
+      
+   }
+   
+
+};
+
 Attempt 2: 3 Poms
 12min
 10min
