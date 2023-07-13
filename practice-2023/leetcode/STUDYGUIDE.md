@@ -25,3 +25,23 @@ https://leetcode.com/discuss/interview-question/352743/Google-or-Onsite-or-Guara
 ## 30 Days of JavaScript
 
 https://leetcode.com/studyplan/30-days-of-javascript/
+
+### JS Idiosyncracies
+
+#### String Methods
+##### String.substring() vs String.substr()
+String.substring(start index, end index noninclusive)
+String.substr(start index, length)
+
+"abcdef".substring(1,2) => "b"
+"abcdef".substr(1,2) => "bc"
+
+#### Higher Order Functions
+
+#### Arrow Functions
+One liner has implicit return
+
+`var gcd = (a,b) => b===0? a: gcd(b, a%b);`
+
+`// This would give an error:
+var gcd = (a,b) => return b===0? a: gcd(b, a%b);`
