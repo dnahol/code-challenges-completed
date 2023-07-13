@@ -45,3 +45,36 @@ One liner has implicit return
 
 `// This would give an error:
 var gcd = (a,b) => return b===0? a: gcd(b, a%b);`
+
+# VIM
+
+Tutorial and Sandbox: https://www.openvim.com/sandbox.html
+
+## My Fav Commands
+
+```
+..j,k..: v down, ^ up
+
+h.....l: < left, > right
+
+gg, GG: file start, file end
+
+0, $: line start, line end
+
+w: next word
+e: end of word, next word
+b: start of word, prev word
+
+:w: save
+:q: quit
+:wq: save, quit
+:q!: quit, no save
+
+u: undo
+
+
+```
+
+# BASH
+
+
