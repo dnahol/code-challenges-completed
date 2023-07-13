@@ -1,3 +1,31 @@
+7.13.2023 Thurs
+Speed Practice Solution:
+__ min
+
+Attempts 1, 2 x5
+
+/**
+ * @param {string} str1
+ * @param {string} str2
+ * @return {string}
+ */
+var gcdOfStrings = function(str1, str2) {
+    // if x divides both str1 and str2, then:
+    // str1 and str2 start with substring matching x
+    // str1+str2 == str2+str1
+    // if x is gcd string, then x is substring of str1+str2 at [0, gcdsize] where gcd size is the gcd of str1 and str2 sizes
+
+
+
+};
+
+var gcd = (a, b)=>{
+    return b===0? a: gcd(b,a%b)
+}
+
+
+
+
 7.12.2023 Wed
 
 Understand and Test Solution:
