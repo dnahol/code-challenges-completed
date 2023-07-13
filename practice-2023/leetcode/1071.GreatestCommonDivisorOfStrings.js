@@ -1,8 +1,28 @@
 7.13.2023 Thurs
 Speed Practice Solution:
-__ min
+20min 
 
-Attempts 1, 2 x5
+
+Attempt 3:
+10min
+
+/**
+ * @param {string} str1
+ * @param {string} str2
+ * @return {string}
+ */
+var gcdOfStrings = function(str1, str2) {
+    // 1. check for gcd str
+    // 2. return gcd str
+    return str1+str2 === str2+str1? str1.substring(0,gcd(str1.length, str2.length)): ""
+};
+
+
+var gcd = (a,b) => {
+    return b==0? a: gcd(b,a%b);
+}
+
+Attempts 1, 2 x5min:
 
 /**
  * @param {string} str1
@@ -13,8 +33,7 @@ var gcdOfStrings = function(str1, str2) {
     // if x divides both str1 and str2, then:
     // str1 and str2 start with substring matching x
     // str1+str2 == str2+str1
-    // if x is gcd string, then x is substring of str1+str2 at [0, gcdsize] where gcd size is the gcd of str1 and str2 sizes
-
+    // if x is gcd string, then x is substring of str1 (and str2 as well) at [0, gcdsize] where gcd size is the gcd of str1 and str2 sizes
 
 
 };
