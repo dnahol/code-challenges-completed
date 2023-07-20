@@ -1,4 +1,7 @@
-2023.Jul 20. Thurs.
+// 2023.Jul 20. Thurs
+// Solved in 3 attempts, ~ 1hr total
+// Tried and switched away from pure recursion
+// 
 
 /**
  * Definition for a binary tree node.
