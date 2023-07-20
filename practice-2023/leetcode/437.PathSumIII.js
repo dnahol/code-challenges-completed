@@ -38,7 +38,64 @@ The number of nodes in the tree is in the range [0, 1000].
 /* 2023.Jul20.Thurs
 */ 
 
+/*
+ * Attempt 2: 25 min
+ * Tried Helper Method Recursion
+ * passed in `targetsum` and `running`
+ *
+ * Failed Test Case:
+ * 
+ * targetsum = 8
+ * tree = [1,null,2,null,3,null,4,null,5]
+ *
+ * 1
+ *  \
+ *   2
+ *    \
+ *     3
+ *	\
+ *	 4
+ *	  \
+ *	   5
+ *	    
+ * Expected: 2
+ * Actual: 3
+ * 
+ **/
+ 
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ *
+ *
+ * @param {TreeNode} root
+ * @param {number} targetSum
+ * @return {number}
+ */
+/**
+var pathSum = function(root, targetSum) {
+    return helper(root, targetSum, targetSum);
+};
 
+
+var helper = (root, targetSum, running) => {
+    if(!root) return 0;
+    let reached = running - root.val === 0? 1: 0; 
+
+    console.log(reached,':' , root.val, 'running:', running)
+    
+    return reached + helper(root.left, targetSum, running - root.val) + helper(root.right, targetSum, running - root.val) + helper(root.left, targetSum, targetSum) + helper(root.right, targetSum, targetSum)  
+}
+ *
+ *
+ *
+ *
+ *
+ * /
 
 
 /*
